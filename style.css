@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;600&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 10px;
+    font-family:'Smooch+Sans',sans-serif;
+}
+a{
+    text-decoration: none;
+
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover
+}
+p{
+    color: white;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+
+}
+/* Hero Section */
+#hero{
+    background-image: url(assets/background-port.jpg) ;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    background-color: black;
+    opacity: .67;
+    z-index: -1;
+
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+
+}
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation: delay 1s; 
+
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 0;
+    background-color: cornflowerblue;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+#hero .cta{
+    display: inline-block ;
+    padding: 10px, 30px;
+    color:cornflowerblue;
+    background-color: transparent;
+    border:2px solid cornflowerblue;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+
+}
+#hero .cta:hover{
+    color: blanchedalmond;
+    background-color: cornflowerblue;
+}
+/* End of Hero Section*/
+/* keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width:100% ;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+
+}
+
+
+@keyframes text_reveal{
+    100%{
+        color: blanchedalmond;
+    }
+
+}
+@keyframes text_reveal_name{
+    100%{
+        color: cornflowerblue;
+        font-weight: 500px;
+    }
+
+}
+
+/* End keyframes */
+ /* Drop-Down Menu*/
+ .menu{
+     font-size: 40px;
+ }
+
+ a, button{
+     font-family: 'Smooch+Sans', sans-serif;
+     font-size: 2rem;
+ }
+ .dropdown{
+     height: 10vh;
+     width: 60%;
+     margin: auto;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     width: 100%;
+     padding: 0 10px;
+     margin: auto;
+ }
+ .explore{
+     position: relative;
+     border-radius: 7px;
+ }
+ .explore ul{
+     position: absolute;
+     right: 0;
+     color: white;
+     background: cornflowerblue;
+     margin-top: 10px;
+     width: 200px;
+     height: 200px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+     list-style: none;
+     border-radius: 7px;
+     opacity: 0;
+     transform: translateY(-10px);
+     transition: all 0.4s ease;
+    }
+    .explore a{
+        color: black;
+       text-decoration: none;
+    }
+.dropdown button{
+   background: none;
+   border: none;
+   color: white; 
+   text-decoration: none;
+   font-size: 2rem;
+   font-weight: bolder; 
+   cursor: pointer ;
+}
+.dropdown button:hover{
+    color: rgb(205, 202, 50);
+    
+} 
+
+.explore li{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.explore li:hover{
+    background: rgb(205, 202, 50);  
+}
+
+
+.explore button:focus+ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}
+/* End of drop down menu */
+/* linked in profile */
+.linkedin{
+    color: rgb(95, 151, 236);
+    font-size: 50px;
+}
+.profile-link{
+display: flex;
+justify-content: center;
+margin-left: 30%;
+margin-top: 45%;
+}
