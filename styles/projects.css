@@ -9,22 +9,26 @@ html{
     font-family:'Smooch+Sans',sans-serif;
 }
 body{
-    background-color: rgb(113, 153, 228);
+    background-color: white;
 }
 .section-title{
     font-size: 4rem;
     font-weight: 1000;
-    color: white;
+    color:white;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: .2rem;
     text-align: center;
+    padding-bottom: 1%;
 }
 #project .projects{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px;
+}
+.project-header{
+    background-color: rgb(14, 39, 77);
 }
 #project .projec-header h1{
     margin-bottom: 50px;
@@ -54,6 +58,8 @@ body{
 }
 p{
     font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
 }
 .project-img{
     display: flex;
@@ -61,6 +67,7 @@ p{
     border-radius: 50px;
     margin-top: 20px;
 }
+
 .writers-room{
     border-radius: 20px;
 }
@@ -89,6 +96,7 @@ a, button{
     width: 100%;
     padding: 0 10px;
     margin: auto;
+    background-color: rgb(14, 39, 77);
 }
 .explore{
     position: relative;
@@ -150,7 +158,7 @@ a, button{
 /* End of dropdown menu */
 /* linked-in Profile */
 .linkedin{
-    color: rgb(17, 68, 146);
+    color: rgb(14, 39, 77);
     font-size: 50px;
 }
 .profile-link{
